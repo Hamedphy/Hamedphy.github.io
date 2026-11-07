@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نقشه راه: از آزمایشگاه EIT تا حافظه کوانتومی Qu-MEM</title>
+<meta name="description" content="نقشه راه هشت‌فازی تبدیل آزمایش شفافیت القایی الکترومغناطیسی (EIT) در بخار گرم روبیدیوم به نخستین حافظه کوانتومی تجاری جهان — Qu-MEM">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B2A4A'/><path d='M16 6l3 7 7.5 1-5.5 5.2 1.4 7.3L16 21.5 9.6 26.5 11 14.2 5.5 14 13 13z' fill='%230E7490'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1B2A4A; --navy-deep:#141F38; --teal:#0E7490; --slate:#334155;
+  --text:#253044; --muted:#5B6B85; --faint:#8A97AD;
+  --bg:#F4F7FB; --surface:#FFFFFF; --surface-2:#EDF2F9; --line:#D8E0EC;
+  --amber:#B45309; --gold:#D97706;
+  --p0:#0F766E; --p1:#0E7490; --p2:#0369A1; --p3:#4338CA; --p4:#B45309;
+  --p5:#BE185D; --p6:#C2410C; --p7:#475569;
+  --text-xs:clamp(.75rem,.7rem+.25vw,.875rem); --text-sm:clamp(.875rem,.8rem+.35vw,1rem);
+  --text-base:clamp(1rem,.95rem+.25vw,1.125rem); --text-lg:clamp(1.125rem,1rem+.75vw,1.5rem);
+  --text-xl:clamp(1.5rem,1.2rem+1.25vw,2.25rem); --text-2xl:clamp(2rem,1.4rem+2.5vw,3.4rem);
+  --s1:.25rem;--s2:.5rem;--s3:.75rem;--s4:1rem;--s5:1.25rem;--s6:1.5rem;--s8:2rem;--s10:2.5rem;--s12:3rem;--s16:4rem;--s20:5rem;
+  --r-sm:.375rem;--r-md:.6rem;--r-lg:.9rem;--r-xl:1.25rem;--r-full:9999px;
+  --shadow:0 4px 18px rgba(27,42,74,.07),0 1px 3px rgba(27,42,74,.05);
+  --shadow-lg:0 16px 44px rgba(27,42,74,.12);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-text-size-adjust:none}
+body{font-family:'Vazirmatn',Tahoma,sans-serif;font-size:var(--text-base);line-height:1.75;color:var(--text);background:var(--bg);font-feature-settings:"ss01"}
+img,svg{display:block;max-width:100%;height:auto}
+p,li{text-wrap:pretty}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.3;font-weight:800}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+::selection{background:rgba(14,116,144,.22)}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:var(--r-sm)}
+.container{max-width:1120px;margin-inline:auto;padding-inline:var(--s5)}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:60;background:rgba(244,247,251,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1120px;margin-inline:auto;padding:var(--s3) var(--s5);display:flex;align-items:center;gap:var(--s6)}
+.brand{display:flex;align-items:center;gap:var(--s3);font-weight:800;color:var(--navy);font-size:var(--text-base);white-space:nowrap}
+.brand svg{flex:none}
+.nav-links{display:flex;gap:var(--s2);margin-inline-start:auto;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{color:var(--muted);font-size:var(--text-sm);padding:var(--s2) var(--s3);border-radius:var(--r-full);white-space:nowrap;transition:all .18s}
+.nav-links a:hover{color:var(--navy);background:var(--surface-2);text-decoration:none}
+.nav-links a.active{color:#fff;background:var(--navy)}
+.nav-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;margin-inline-start:auto;color:var(--navy);border-radius:var(--r-md);flex:none}
+.nav-toggle:hover{background:var(--surface-2)}
+@media(max-width:720px){
+  .nav-toggle{display:flex}
+  .nav-links{display:none;position:absolute;top:100%;right:0;left:0;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;gap:var(--s1);padding:var(--s3) var(--s5) var(--s4);margin:0;box-shadow:var(--shadow-lg)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:var(--s2) var(--s4)}
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--navy);color:#EAF0F9;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:26px 26px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),transparent 75%)}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:var(--s12);align-items:center;padding-block:clamp(var(--s12),7vw,var(--s20))}
+.kicker{display:inline-flex;align-items:center;gap:var(--s2);font-size:var(--text-xs);font-weight:600;color:#8FD3E8;background:rgba(14,116,144,.28);border:1px solid rgba(143,211,232,.35);padding:var(--s1) var(--s4);border-radius:var(--r-full);margin-bottom:var(--s5)}
+.hero h1{font-size:var(--text-2xl);font-weight:900;line-height:1.25;margin-bottom:var(--s5)}
+.hero h1 em{font-style:normal;color:#7DD3FC}
+.hero p.lead{font-size:var(--text-lg);font-weight:300;color:#C4D2E6;line-height:1.9;margin-bottom:var(--s8);max-width:56ch}
+.hero-stats{display:flex;flex-wrap:wrap;gap:var(--s3)}
+.hstat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-md);padding:var(--s3) var(--s5);min-width:8.5rem}
+.hstat b{display:block;font-size:var(--text-xl);font-weight:800;color:#fff;line-height:1.2}
+.hstat span{font-size:var(--text-xs);color:#9FB2CC}
+.hero-photo{position:relative}
+.hero-photo img{border-radius:var(--r-xl);box-shadow:0 24px 60px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.15)}
+.hero-photo figcaption{font-size:var(--text-xs);color:#8CA0BE;margin-top:var(--s3);line-height:1.6}
+@media(max-width:880px){.hero-inner{grid-template-columns:1fr}.hero-photo{order:-1;max-width:420px}}
+
+/* ---------- section scaffolding ---------- */
+section{padding-block:clamp(var(--s12),6vw,var(--s20))}
+.sec-head{margin-bottom:var(--s10);max-width:760px}
+.sec-head .tag{font-size:var(--text-xs);font-weight:700;letter-spacing:.12em;color:var(--teal);text-transform:uppercase;margin-bottom:var(--s2);display:block}
+.sec-head h2{font-size:var(--text-xl);color:var(--navy);margin-bottom:var(--s3)}
+.sec-head p{color:var(--muted);font-size:var(--text-base)}
+
+/* ---------- gantt ---------- */
+.gantt-wrap{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--shadow);padding:clamp(var(--s4),3vw,var(--s8));overflow-x:auto}
+.gantt-wrap::after{content:"";position:absolute;inset-block:0;left:0;width:2.2rem;background:linear-gradient(to left,transparent,#fff);pointer-events:none;border-radius:var(--r-xl) 0 0 var(--r-xl)}
+@media(min-width:721px){.gantt-wrap::after{display:none}}
+.gantt{min-width:680px}
+.g-row{display:grid;grid-template-columns:150px 1fr;align-items:center;gap:var(--s4);margin-bottom:var(--s3)}
+.g-label{display:flex;align-items:center;gap:var(--s2);font-size:var(--text-sm);font-weight:600;color:var(--slate);white-space:nowrap}
+.g-dot{width:.6rem;height:.6rem;border-radius:var(--r-full);flex:none}
+.g-track{position:relative;height:2.1rem;background:var(--surface-2);border-radius:var(--r-sm);overflow:visible}
+.g-bar{position:absolute;top:.3rem;height:1.5rem;border-radius:.4rem;display:flex;align-items:center;padding-inline:.6rem;color:#fff;font-size:var(--text-xs);font-weight:600;white-space:nowrap;box-shadow:0 2px 6px rgba(27,42,74,.25);width:0;transition:width 1.1s cubic-bezier(.22,1,.36,1)}
+.g-axis{position:relative;height:1.6rem;margin-inline-start:calc(150px + var(--s4));font-size:var(--text-xs);color:var(--faint)}
+.g-axis span{position:absolute;transform:translateX(50%)}
+.g-milestone-track{position:relative;height:4.6rem;margin-inline-start:calc(150px + var(--s4))}
+.m-diamond{position:absolute;top:.5rem;width:1.05rem;height:1.05rem;background:var(--gold);transform:translateX(50%) rotate(45deg);border-radius:.18rem;box-shadow:0 0 0 4px rgba(217,119,6,.18)}
+.m-label{position:absolute;top:2.4rem;transform:translateX(50%);text-align:center;font-size:var(--text-xs);color:var(--amber);font-weight:700;line-height:1.35;white-space:nowrap}
+.m-label small{display:block;font-weight:400;color:var(--muted)}
+.g-note{font-size:var(--text-xs);color:var(--faint);margin-top:var(--s4)}
+
+/* ---------- phases timeline ---------- */
+.timeline{position:relative;padding-inline-start:0}
+.phase{display:grid;grid-template-columns:64px 1fr;gap:var(--s6);position:relative;padding-bottom:var(--s12)}
+.phase:last-child{padding-bottom:0}
+.phase::before{content:"";position:absolute;top:64px;bottom:-.5rem;right:31px;width:2px;background:var(--line)}
+.phase:last-child::before{display:none}
+.p-num{width:3.5rem;height:3.5rem;border-radius:var(--r-full);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.25rem;color:#fff;box-shadow:0 6px 16px rgba(27,42,74,.22);position:relative;z-index:2}
+.p-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--shadow);overflow:hidden}
+.p-head{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s3);padding:var(--s5) var(--s6);border-bottom:1px solid var(--line)}
+.p-head h3{font-size:var(--text-lg);color:var(--navy);flex:1;min-width:12rem}
+.chip{font-size:var(--text-xs);font-weight:700;padding:.28rem .8rem;border-radius:var(--r-full);white-space:nowrap}
+.chip.ghost{background:var(--surface-2);color:var(--muted)}
+.chip.solid{color:#fff}
+.p-body{padding:var(--s5) var(--s6) var(--s6)}
+.p-body>p{color:var(--muted);margin-bottom:var(--s4)}
+.p-cols{display:grid;grid-template-columns:1fr;gap:var(--s5)}
+@media(min-width:760px){.p-cols{grid-template-columns:1fr 1fr;align-items:start}}
+.p-points{list-style:none}
+.p-points li{position:relative;padding-inline-start:1.35rem;margin-bottom:var(--s2);font-size:var(--text-sm);color:var(--text)}
+.p-points li::before{content:"";position:absolute;right:0;top:.62em;width:.45rem;height:.45rem;border-radius:var(--r-full);background:var(--pc,var(--teal))}
+.p-exit{background:color-mix(in srgb,var(--pc,var(--teal)) 8%,#fff);border:1px solid color-mix(in srgb,var(--pc,var(--teal)) 25%,#fff);border-radius:var(--r-md);padding:var(--s4) var(--s5)}
+.p-exit b{display:block;font-size:var(--text-xs);color:var(--pc,var(--teal));margin-bottom:var(--s1)}
+.p-exit b span[dir="ltr"]{white-space:nowrap}
+.p-exit span{font-size:var(--text-sm);font-weight:600;color:var(--slate)}
+.p-fig{margin-top:var(--s5)}
+.p-fig img{border-radius:var(--r-lg);border:1px solid var(--line)}
+.p-fig figcaption{font-size:var(--text-xs);color:var(--faint);margin-top:var(--s2)}
+.p-photos{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);margin-top:var(--s5)}
+.p-photos figure img{border-radius:var(--r-lg);border:1px solid var(--line);aspect-ratio:4/3;object-fit:cover;width:100%}
+.p-photos figcaption{font-size:var(--text-xs);color:var(--faint);margin-top:var(--s2)}
+
+/* ---------- TRL ladder ---------- */
+.trl-band{background:var(--navy);color:#DCE6F5;border-radius:var(--r-xl);padding:clamp(var(--s6),4vw,var(--s10));box-shadow:var(--shadow-lg)}
+.trl-band .sec-head .tag{color:#7DD3FC}
+.trl-band .sec-head h2{color:#fff}
+.trl-band .sec-head p{color:#9FB2CC}
+.ladder{display:flex;align-items:flex-end;gap:var(--s2);margin-top:var(--s8)}
+.step{flex:1;display:flex;flex-direction:column;justify-content:flex-end;text-align:center;gap:var(--s2);min-width:0}
+.step i{display:block;border-radius:.5rem .5rem 0 0;font-style:normal;font-weight:800;color:#fff;font-size:var(--text-sm);padding-block:.5rem;min-height:2.2rem}
+.step em{font-style:normal;font-size:var(--text-xs);color:#9FB2CC;line-height:1.45;display:block}
+.step .lvl{font-size:var(--text-xs);font-weight:700;color:#C4D2E6}
+@media(max-width:640px){.ladder{flex-wrap:wrap;gap:var(--s2)}.step{flex:1 1 30%}.step i{min-height:1.6rem}}
+
+/* ---------- gates ---------- */
+.gates{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:var(--s4)}
+.gate{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--s5);position:relative;box-shadow:var(--shadow)}
+.gate .g-id{font-weight:900;font-size:var(--text-lg);color:var(--navy)}
+.gate .g-when{font-size:var(--text-xs);color:var(--teal);font-weight:700;margin-bottom:var(--s2)}
+.gate p{font-size:var(--text-sm);color:var(--muted)}
+.gate .g-arrow{position:absolute;top:50%;inset-inline-start:-1.15rem;transform:translateY(-50%);color:var(--faint);z-index:2;background:var(--bg);border-radius:var(--r-full)}
+
+/* ---------- milestones ---------- */
+.mline{position:relative;margin-top:var(--s10)}
+.mline::before{content:"";position:absolute;top:.9rem;right:0;left:0;height:3px;background:linear-gradient(to left,var(--p0),var(--p6));border-radius:var(--r-full);opacity:.35}
+.mrow{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s4);position:relative}
+.mcard{padding-top:2.4rem;position:relative}
+.mcard::before{content:"";position:absolute;top:.25rem;right:1.6rem;width:1.15rem;height:1.15rem;background:var(--mc,var(--gold));transform:rotate(45deg);border-radius:.2rem;box-shadow:0 0 0 5px var(--bg)}
+.mcard h3{font-size:var(--text-base);color:var(--navy);margin-bottom:var(--s1)}
+.mcard .mm{font-size:var(--text-xs);font-weight:700;color:var(--mc,var(--gold));margin-bottom:var(--s2)}
+.mcard p{font-size:var(--text-sm);color:var(--muted)}
+@media(max-width:820px){.mrow{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.mrow{grid-template-columns:1fr}}
+
+/* ---------- lessons ---------- */
+.lessons{display:grid;grid-template-columns:1fr;gap:var(--s4)}
+@media(min-width:760px){.lessons{grid-template-columns:1fr 1fr}}
+.lesson{display:flex;gap:var(--s4);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--s5);box-shadow:var(--shadow)}
+.lesson .ln{font-size:2rem;font-weight:900;color:color-mix(in srgb,var(--teal) 30%,#fff);-webkit-text-stroke:1.5px var(--teal);line-height:1;flex:none}
+.lesson p{font-size:var(--text-sm);color:var(--slate);font-weight:500}
+
+/* ---------- sources / footer ---------- */
+.src-grid{columns:2 320px;column-gap:var(--s8)}
+.src-grid li{break-inside:avoid;font-size:var(--text-sm);color:var(--muted);margin-bottom:var(--s3);padding-inline-start:1.4rem;position:relative}
+.src-grid li::before{content:"";position:absolute;right:0;top:.6em;width:.4rem;height:.4rem;border-radius:var(--r-full);background:var(--teal)}
+footer{background:var(--navy);color:#9FB2CC;padding-block:var(--s10);margin-top:var(--s12)}
+footer .container{display:flex;flex-wrap:wrap;gap:var(--s4);justify-content:space-between;align-items:center;font-size:var(--text-sm)}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none}.g-bar{transition:none}}
+</style>
+</head>
+<body>
+
+<a class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)" href="#main">پرش به محتوا</a>
+
+<nav class="nav" aria-label="ناوبری اصلی">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1B2A4A"/><path d="M16 6l3 7 7.5 1-5.5 5.2 1.4 7.3L16 21.5 9.6 26.5 11 14.2 5.5 14 13 13z" fill="#0E7490"/></svg>
+      نقشه راه Qu-MEM
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks" aria-label="باز کردن منو">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="nav-links" id="navlinks">
+      <a href="#gantt">گانت</a>
+      <a href="#phases">فازها</a>
+      <a href="#trl">TRL</a>
+      <a href="#gates">دروازه‌ها</a>
+      <a href="#milestones">نقاط عطف</a>
+      <a href="#lessons">درس‌ها</a>
+      <a href="#sources">منابع</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container hero-inner">
+    <div>
+      <span class="kicker">نقشه راه فناوری · آزمایشگاه تا بازار</span>
+      <h1>از میز اپتیکی <em>EIT</em> تا نخستین حافظه کوانتومی تجاری جهان</h1>
+      <p class="lead">مسیر واقعی و پنج‌ساله‌ای که گروه فیزیک Stony Brook و شرکت Qunnect طی کردند: تبدیل یک آزمایش شفافیت القایی الکترومغناطیسی در بخار گرم روبیدیوم به محصول Qu-MEM — حافظه‌ای که در تونل‌های متروی نیویورک کار می‌کند.</p>
+      <div class="hero-stats">
+        <div class="hstat"><b>۸ فاز</b><span>معماری تا نسل بعد</span></div>
+        <div class="hstat"><b>۶۰ ماه</b><span>از ایده تا بازار</span></div>
+        <div class="hstat"><b>۵ دروازه</b><span>تصمیم Go/No-Go</span></div>
+        <div class="hstat"><b>TRL ۱→۹</b><span>مسیر بلوغ فناوری</span></div>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="assets/img/qumem_rack.jpg" alt="حافظه کوانتومی Qu-MEM در قاب رَک 2U آماده نصب در مرکز داده" width="800" height="533">
+      <figcaption>حافظه کوانتومی Qu-MEM — رَک 2U، دمای اتاق، برگزیده بهترین اختراعات ۲۰۲۶ مجله TIME</figcaption>
+    </figure>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ GANTT ============ -->
+<section id="gantt" aria-labelledby="gantt-h">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="tag">نمای استاندارد</span>
+      <h2 id="gantt-h">خط زمان هشت‌فازی</h2>
+      <p>فازها روی‌هم‌رفته پیش می‌روند؛ هر فاز تنها پس از تحقق سنجه خروجی فاز قبل به‌طور کامل فعال می‌شود. لوزی‌های طلایی، نقاط عطف تأیید هستند.</p>
+    </div>
+    <div class="gantt-wrap rv">
+      <div class="gantt">
+        <div class="g-row"><div class="g-label"><i class="g-dot" style="background:var(--p0)"></i>فاز ۰ · معماری</div><div class="g-track"><div class="g-bar" data-w="5" style="background:var(--p0);right:0%"></div></div></div>
+        <div class="g-row"><div class="g-label"><i class="g-dot" style="background:var(--p1)"></i>فاز ۱ · میز مرجع</div><div class="g-track"><div class="g-bar" data-w="18.3" data-r="1.67" style="background:var(--p1)">۱–۱۲</div></div></div>
+        <div class="g-row"><div class="g-label"><i class="g-dot" style="background:var(--p2)"></i>فاز ۲ · بهینه‌سازی</div><div class="g-track"><div class="g-bar" data-w="25" data-r="15" style="background:var(--p2)">۹–۲۴</div></div></div>
+        <div class="g-row"><div class="g-label"><i class="g-dot" style="background:var(--p3)"></i>فاز ۳ · بسته‌بندی</div><div class="g-track"><div class="g-bar" data-w="30" data-r="30" style="background:var(--p3)">۱۸–۳۶</div></div></div>
+        <div class="g-row"><div class="g-label"><i class="g-dot" style="background:var(--p4)"></i>فاز ۴ · چالش‌ها</div><div class="g-track"><div class="g-bar" data-w="30" data-r="40" style="background:var(--p4)">۲۴–۴۲</div></div></div>
+        <div class="g-row"><div class="g-label"><i class="g-dot" style="background:var(--p5)"></i>فاز ۵ · اعتبارسنجی</div><div class="g-track"><div class="g-bar" data-w="30" data-r="60" style="background:var(--p5)">۳۶–۵۴</div></div></div>
+        <div class="g-row"><div class="g-label"><i class="g-dot" style="background:var(--p6)"></i>فاز ۶ · تجاری‌سازی</div><div class="g-track"><div class="g-bar" data-w="20" data-r="70" style="background:var(--p6)">۴۲–۵۴+</div></div></div>
+        <div class="g-row"><div class="g-label"><i class="g-dot" style="background:var(--p7)"></i>فاز ۷ · نسل بعد</div><div class="g-track"><div class="g-bar" data-w="10" data-r="90" style="background:var(--p7)">۵۴+</div></div></div>
+        <div class="g-milestone-track">
+          <i class="m-diamond" style="right:20%"></i><span class="m-label" style="right:20%">M1<small>ماه ۱۲</small></span>
+          <i class="m-diamond" style="right:40%"></i><span class="m-label" style="right:40%">M2<small>ماه ۲۴</small></span>
+          <i class="m-diamond" style="right:60%"></i><span class="m-label" style="right:60%">M3<small>ماه ۳۶</small></span>
+          <i class="m-diamond" style="right:90%"></i><span class="m-label" style="right:90%">M4<small>ماه ۵۴</small></span>
+        </div>
+        <div class="g-axis" aria-hidden="true">
+          <span style="right:0%">ماه ۰</span><span style="right:20%">۱۲</span><span style="right:40%">۲۴</span><span style="right:60%">۳۶</span><span style="right:80%">۴۸</span><span style="right:100%">۶۰</span>
+        </div>
+      </div>
+      <p class="g-note">محور افقی: ماه از آغاز پروژه (راست به چپ). زمان‌ها از مسیر واقعی Qunnect/Stony Brook استخراج شده‌اند. در نمایشگرهای کوچک، نمودار به‌صورت افقی قابل جابه‌جایی است.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHASES ============ -->
+<section id="phases" aria-labelledby="phases-h" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="tag">شرح تفصیلی</span>
+      <h2 id="phases-h">هشت فاز، از فیزیک تا بازار</h2>
+      <p>هر فاز با یک «سنجه خروجی» بسته می‌شود، نه با حس خوب. اگر سنجه محقق نشده باشد، فاز بعدی آغاز نمی‌شود.</p>
+    </div>
+
+    <div class="timeline">
+
+      <article class="phase rv" style="--pc:var(--p0)">
+        <div class="p-num" style="background:var(--p0)">۰</div>
+        <div class="p-card">
+          <div class="p-head"><h3>معماری فیزیکی و کمیت‌های هدف</h3><span class="chip ghost">ماه ۰–۳</span><span class="chip solid" style="background:var(--p0)">TRL 1–2</span></div>
+          <div class="p-body">
+            <p>مهندسی محصول از انتخابی آغاز می‌شود که هیچ بسته‌بندی نمی‌تواند جبرانش کند: نقطه کارکرد روی مثلث مصالحه EIT. برای حافظه شبکه شهری، این نقطه «وفاداری و زمان ذخیره» است، نه پهنای باند.</p>
+            <div class="p-cols">
+              <ul class="p-points">
+                <li>اتم ⁸⁷Rb غنی‌شده و خط D₁ در ۷۹۵ نانومتر</li>
+                <li>طرح ترازی Λ با شکافتگی فوق‌ریز 6834.68 مگاهرتز</li>
+                <li>بخار گرم ۴۰ تا ۹۰ درجه — بدون کریوژن و خلأ</li>
+                <li>قطبش‌های σ⁺/σ⁻ برای سرکوب نویز رامان</li>
+              </ul>
+              <div class="p-exit"><b>سنجه خروجی — <span dir="ltr">G1</span></b><span>سند کمیت‌های هدف: وفاداری >۹۵٪، ذخیره >۱۶۰µs، قالب 2U</span></div>
+            </div>
+            <figure class="p-fig"><img src="assets/img/triangle.png" alt="مثلث مصالحه EIT: پهنای باند، زمان ذخیره و بازدهی در تضاد بنیادین‌اند" loading="lazy" decoding="async" width="1200" height="777"><figcaption>مثلث مصالحه EIT و نقطه کارکرد Qu-MEM</figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase rv" style="--pc:var(--p1)">
+        <div class="p-num" style="background:var(--p1)">۱</div>
+        <div class="p-card">
+          <div class="p-head"><h3>میز آزمایشگاه مرجع</h3><span class="chip ghost">ماه ۱–۱۲</span><span class="chip solid" style="background:var(--p1)">TRL 3</span></div>
+          <div class="p-body">
+            <p>تمام اجزای فیزیکی محصول آینده در مقیاس میز اپتیکی ساخته و به‌هم متصل می‌شوند. معیار اتمام فاز، ذخیره و بازیابی تکرارپذیر پالس کلاسیک با کنترل میدان نوری است.</p>
+            <div class="p-cols">
+              <ul class="p-points">
+                <li>لیزر ECDL قفل‌شده با جذب اشباع (SAS)</li>
+                <li>EOM پروب و AOM کنترل با زمان بالاآمدن 100 نانوثانیه</li>
+                <li>سلول کوارتز ۸۰ میلی‌متری با ۱۰ تور نئون</li>
+                <li>پرتوهای بزرگ 1.6/2 میلی‌متری و آرایش ساگناک دو‌ریلی</li>
+              </ul>
+              <div class="p-exit"><b>سنجه خروجی — <span dir="ltr">G2 · M1</span></b><span>ذخیره/بازیابی پالس کلاسیک تکرارپذیر روی میز</span></div>
+            </div>
+            <figure class="p-fig"><img src="assets/img/arch_block.png" alt="بلوک دیاگرام معماری سخت‌افزاری از لیزر قفل‌شده تا خروجی فیبر" loading="lazy" decoding="async" width="1463" height="813"><figcaption>معماری سخت‌افزاری کامل: از لیزر قفل‌شده تا خروجی فیبر</figcaption></figure>
+            <div class="p-photos">
+              <figure><img src="assets/img/vapor_cell.jpg" alt="سلول بخار روبیدیوم" loading="lazy" decoding="async" width="880" height="736"><figcaption>سلول بخار روبیدیوم — قلب فیزیکی حافظه</figcaption></figure>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase rv" style="--pc:var(--p2)">
+        <div class="p-num" style="background:var(--p2)">۲</div>
+        <div class="p-card">
+          <div class="p-head"><h3>بهینه‌سازی و رژیم کوانتومی</h3><span class="chip ghost">ماه ۹–۲۴</span><span class="chip solid" style="background:var(--p2)">TRL 4</span></div>
+          <div class="p-body">
+            <p>در این فاز «کار می‌کند» به «بهترین نقطه کارکرد ممکن» تبدیل می‌شود. نتیجه فاز، اثبات ذخیره تک‌فوتونی با وفاداری بالاتر از آستانه کلاسیک است — بدون آن، ادعای کوانتومی‌بودن محصول بی‌معناست.</p>
+            <div class="p-cols">
+              <ul class="p-points">
+                <li>گاز بافر نئون: نقطه تعادل ۱۰ تور (زمان ذخیره در برابر پهن‌شدگی گذارها)</li>
+                <li>دما: هر سنجه در دمایی بهینه می‌شود — دمای کاری، مصالحه است</li>
+                <li>سرکوب نویز اتمی رامان و FWM با قواعد قطبش</li>
+                <li>کف نویز 1.9×10⁻³ فوتون به‌ازای هر ذخیره</li>
+              </ul>
+              <div class="p-exit"><b>سنجه خروجی — <span dir="ltr">G3 · M2</span></b><span>بازدهی ۷٪ · وفاداری ۹۴.۸٪ تک‌فوتونی · ذخیره ۱۶۰–۱۸۰µs</span></div>
+            </div>
+            <figure class="p-fig"><img src="assets/img/temp_optima.png" alt="نمودار بهینه‌های دمایی متعارض سه سنجه اصلی حافظه" loading="lazy" decoding="async" width="1279" height="642"><figcaption>بهینه‌های دمایی متعارض: همدوسی، بازدهی و نسبت سیگنال به نویز</figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase rv" style="--pc:var(--p3)">
+        <div class="p-num" style="background:var(--p3)">۳</div>
+        <div class="p-card">
+          <div class="p-head"><h3>بسته‌بندی مهندسی: از میز به ماژول</h3><span class="chip ghost">ماه ۱۸–۳۶</span><span class="chip solid" style="background:var(--p3)">TRL 5–6</span></div>
+          <div class="p-body">
+            <p>هدف، حذف هر تنظیم دستی و هر وابستگی به آزمایشگاه است. قاعده طلایی: اگر برای کارکرد دستگاه باید آینه را با پیچ‌گوشتی تنظیم کرد، آن دستگاه محصول نیست.</p>
+            <div class="p-cols">
+              <ul class="p-points">
+                <li>دو ماژول نوری مستقل: حافظه و فیلتر</li>
+                <li>صفحه‌های پایه مونولیتیک روی ریل‌های سرخورنده</li>
+                <li>حذف تنظیمات پرشکننده؛ چرخنده‌های بدون تنظیم</li>
+                <li>API برای پایش و کنترل از راه دور؛ مصرف ۱۵ وات</li>
+              </ul>
+              <div class="p-exit"><b>سنجه خروجی — <span dir="ltr">G4 · M3</span></b><span>بازتولید عملکرد فاز ۲ داخل رَک 2U پس از حمل‌ونقل، بدون تنظیم اپتیکی</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase rv" style="--pc:var(--p4)">
+        <div class="p-num" style="background:var(--p4)">۴</div>
+        <div class="p-card">
+          <div class="p-head"><h3>سه چالش مهندسی سخت</h3><span class="chip ghost">ماه ۲۴–۴۲</span><span class="chip solid" style="background:var(--p4)">TRL 6</span></div>
+          <div class="p-body">
+            <p>محصول را از نمونه اولیه جدا می‌کند سه پدیده محیطی: میدان مغناطیسی، دما و ارتعاش. هر سه باید به‌صورت کمی هدف‌گذاری، طراحی و آزموده شوند — تفاوت آزمایشگاه و محصول، حدود ۱۳ مرتبه بزرگی سرکوب نویز است.</p>
+            <div class="p-cols">
+              <ul class="p-points">
+                <li>سپر دولایه μ-metal با سرکوب بیش از 30dB</li>
+                <li>اتالون‌های فراب-پرو ناهم‌سنگ (13/21 گیگاهرتز) با سرکوب بیش از 80dB</li>
+                <li>سرو دمای اتالون با وضوح 1 میلی‌کلوین</li>
+                <li>ایزولاسیون مجموع بیش از 145dB</li>
+              </ul>
+              <div class="p-exit"><b>سنجه خروجی</b><span>پایداری ۱۴ ساعته: میانگین عبوردهی ۷۳.۱٪ با انحراف فقط ۱.۴٪</span></div>
+            </div>
+            <figure class="p-fig"><img src="assets/img/noise_cascade.png" alt="آبشار سرکوب نویز از میدان کنترل تا سطح تک‌فوتون" loading="lazy" decoding="async" width="1655" height="884"><figcaption>آبشار سرکوب نویز — تفاوت اصلی آزمایشگاه و محصول</figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase rv" style="--pc:var(--p5)">
+        <div class="p-num" style="background:var(--p5)">۵</div>
+        <div class="p-card">
+          <div class="p-head"><h3>اعتبارسنجی مستقل و میدانی</h3><span class="chip ghost">ماه ۳۶–۵۴</span><span class="chip solid" style="background:var(--p5)">TRL 7</span></div>
+          <div class="p-body">
+            <p>محصول تنها زمانی محصول است که در محیط واقعی — نه آزمایشگاه سازنده — مشخصاتش را حفظ کند: مشخصه‌یابی مستقل مشتری، آزمون چندگره‌ای و شبکه واقعی.</p>
+            <div class="p-cols">
+              <ul class="p-points">
+                <li>مشخصه‌یابی مستقل: همدوسی 278µs در 60°C و BER کمتر از 10⁻¹⁰</li>
+                <li>تداخل HOM دو حافظه مستقل با پدیداری ۴۶.۸٪</li>
+                <li>لینک ۱۵۸ کیلومتری Stony Brook–BNL</li>
+                <li>شبکه خودکار ۳۴ کیلومتری نیویورک با ۱۳۰ هزار جفت بر ثانیه</li>
+              </ul>
+              <div class="p-exit"><b>سنجه خروجی — <span dir="ltr">G5 · M4</span></b><span>تأیید مستقل مشتری + نصب در شبکه فعال شهری</span></div>
+            </div>
+            <figure class="p-fig"><img src="assets/img/perf_evolution.png" alt="ارتقای سنجه‌ها از آزمایشگاه ۲۰۱۵ تا محصول" loading="lazy" decoding="async" width="1516" height="875"><figcaption>ارتقای سنجه‌ها در مسیر واقعی: از آزمایشگاه تا محصول</figcaption></figure>
+            <div class="p-photos">
+              <figure><img src="assets/img/network_node.jpg" alt="گره شبکه کوانتومی در آزمایشگاه" loading="lazy" decoding="async" width="1400" height="933"><figcaption>گره شبکه کوانتومی — مقصد نهایی: کنار تجهیزات مخابراتی در تونل‌های شهر</figcaption></figure>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase rv" style="--pc:var(--p6)">
+        <div class="p-num" style="background:var(--p6)">۶</div>
+        <div class="p-card">
+          <div class="p-head"><h3>تجاری‌سازی، تولید و استقرار</h3><span class="chip ghost">ماه ۴۲–۵۴+</span><span class="chip solid" style="background:var(--p6)">TRL 8–9</span></div>
+          <div class="p-body">
+            <p>از اسپین‌آف دانشگاهی ۲۰۱۷ تا نصب در شبکه‌های فعال سه قاره: نخستین فروش تجاری حافظه کوانتومی جهان به آزمایشگاه Brookhaven (۲۰۲۱)، شبکه خودکار ۳۴ کیلومتری (۲۰۲۴)، شبکه 17.6 کیلومتری با Cisco در فیبر تجاری و انتخاب در فهرست TIME (۲۰۲۶).</p>
+            <div class="p-cols">
+              <ul class="p-points">
+                <li>سبد محصول: Qu-MEM، Qu-Source، Qu-LSR، Qu-Lock و پلتفرم Carina</li>
+                <li>قیمت مرجع Mark 3 با نصب و آموزش: حدود ۲۵۵ هزار دلار</li>
+                <li>استقرار فعال: GothamQ (نیویورک)، BearlinQ (برلین)، ABQ-Net (البوکرکی)</li>
+              </ul>
+              <div class="p-exit"><b>سنجه خروجی</b><span>قراردادهای فروش + نصب‌های فعال در شبکه‌های واقعی</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase rv" style="--pc:var(--p7)">
+        <div class="p-num" style="background:var(--p7)">۷</div>
+        <div class="p-card">
+          <div class="p-head"><h3>نقشه بهبود نسل بعد</h3><span class="chip ghost">ماه ۵۴+</span></div>
+          <div class="p-body">
+            <p>هر محدودیت شناخته‌شده محصول فعلی، بلیت توسعه نسل بعد است:</p>
+            <div class="p-cols">
+              <ul class="p-points">
+                <li>زمان ذخیره ~۱ms ← پوشش ضدآرامش و بهبود سپر طولی</li>
+                <li>بازدهی ۵–۷٪ ← حفره نوری بیرونی</li>
+                <li>پهنای باند محدود به AOM ← مدولاتور الکترواپتیکی</li>
+                <li>هزینه و ابعاد ← فوتونیک یکپارچه</li>
+                <li>طول موج 795nm ← تبدیل مستقیم به باند مخابراتی O/C</li>
+              </ul>
+              <div class="p-exit"><b>چشم‌انداز</b><span>خطای عملکرد از 10⁻² به 10⁻³ با نصب کم‌تنش اتالون و دی‌تونینگ جادویی</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRL ============ -->
+<section id="trl" aria-labelledby="trl-h" style="padding-top:0">
+  <div class="container">
+    <div class="trl-band rv">
+      <div class="sec-head">
+        <span class="tag">چارچوب استاندارد</span>
+        <h2 id="trl-h">نرد سطوح آمادگی فناوری (TRL)</h2>
+        <p>مسیر بلوغ فناوری بر پایه استاندارد ناتو/ناسا — از اثبات اصول تا سیستم تأییدشده در عمل.</p>
+      </div>
+      <div class="ladder" role="img" aria-label="نرد TRL از سطح ۱ تا ۹ با نگاشت فازها">
+        <div class="step"><span class="lvl">TRL 1–2</span><i style="background:var(--p0);height:2.6rem">۱–۲</i><em>اثبات اصول · فاز ۰</em></div>
+        <div class="step"><span class="lvl">TRL 3</span><i style="background:var(--p1);height:4rem">۳</i><em>میز آزمایشگاه · فاز ۱</em></div>
+        <div class="step"><span class="lvl">TRL 4</span><i style="background:var(--p2);height:5.4rem">۴</i><em>اثبات کوانتومی · فاز ۲</em></div>
+        <div class="step"><span class="lvl">TRL 5</span><i style="background:var(--p3);height:6.8rem">۵</i><em>بسته‌بندی · فاز ۳</em></div>
+        <div class="step"><span class="lvl">TRL 6</span><i style="background:var(--p4);height:8.2rem">۶</i><em>محیط عملیاتی · فاز ۴</em></div>
+        <div class="step"><span class="lvl">TRL 7</span><i style="background:var(--p5);height:9.6rem">۷</i><em>شبکه واقعی · فاز ۵</em></div>
+        <div class="step"><span class="lvl">TRL 8–9</span><i style="background:var(--p6);height:11rem">۸–۹</i><em>سیستم کامل و فروش · فاز ۶</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GATES ============ -->
+<section id="gates" aria-labelledby="gates-h" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="tag">Stage-Gate</span>
+      <h2 id="gates-h">دروازه‌های تصمیم</h2>
+      <p>هر دروازه تنها با تحقق سنجه کمی باز می‌شود؛ بدون عبور از دروازه، فاز بعد فعال نمی‌شود.</p>
+    </div>
+    <div class="gates">
+      <div class="gate rv"><div class="g-id">G1</div><div class="g-when">ماه ۳</div><p>سند کمیت‌های هدف محصول مصوب: وفاداری، زمان ذخیره و قالب رَک تعریف شده است.</p></div>
+      <div class="gate rv"><div class="g-id">G2</div><div class="g-when">ماه ۱۲ · M1</div><p>بازیابی پالس کلاسیک تکرارپذیر روی میز اپتیکی با کنترل میدان نوری.</p></div>
+      <div class="gate rv"><div class="g-id">G3</div><div class="g-when">ماه ۲۴ · M2</div><p>وفاداری ۹۴.۸٪ در سطح تک‌فوتونی — بالای آستانه کلاسیک ۸۵.۳٪.</p></div>
+      <div class="gate rv"><div class="g-id">G4</div><div class="g-when">ماه ۳۶ · M3</div><p>نمونه 2U پس از حمل‌ونقل بدون تنظیم اپتیکی کار می‌کند و با API کنترل می‌شود.</p></div>
+      <div class="gate rv"><div class="g-id">G5</div><div class="g-when">ماه ۵۴ · M4</div><p>مشخصه‌یابی مستقل مشتری + نصب موفق در شبکه فعال شهری.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MILESTONES ============ -->
+<section id="milestones" aria-labelledby="milestones-h" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="tag">نقاط عطف</span>
+      <h2 id="milestones-h">چهار نقطه عطف تأیید</h2>
+      <p>هر نقطه عطف یک ادعای کمی دارد که مستندات رسمی و مقالات داوری‌شده آن را تأیید می‌کنند.</p>
+    </div>
+    <div class="mline rv">
+      <div class="mrow">
+        <div class="mcard" style="--mc:var(--p1)"><h3>M1 · ذخیره کلاسیک پایدار</h3><div class="mm">ماه ۱۲</div><p>بازیابی پالس با کنترل تکرارپذیر روی میز اپتیکی — نخستین اثبات کارکرد هسته فیزیکی.</p></div>
+        <div class="mcard" style="--mc:var(--p2)"><h3>M2 · اثبات رژیم کوانتومی</h3><div class="mm">ماه ۲۴</div><p>وفاداری ۹۴.۸٪ تک‌فوتونی، بازدهی ۷٪ و ذخیره ۱۶۰–۱۸۰ میکروثانیه.</p></div>
+        <div class="mcard" style="--mc:var(--p3)"><h3>M3 · نمونه 2U کارکردی</h3><div class="mm">ماه ۳۶</div><p>بازتولید عملکرد آزمایشگاهی داخل جعبه رَک، با کنترل API و مصرف ۱۵ وات.</p></div>
+        <div class="mcard" style="--mc:var(--gold)"><h3>M4 · تأیید میدانی و فروش</h3><div class="mm">ماه ۵۴+</div><p>مشخصه‌یابی مستقل مشتری، آزمون‌های شبکه واقعی و نخستین فروش تجاری.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LESSONS ============ -->
+<section id="lessons" aria-labelledby="lessons-h" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="tag">جمع‌بندی</span>
+      <h2 id="lessons-h">شش درس کلیدی مسیر</h2>
+    </div>
+    <div class="lessons">
+      <div class="lesson rv"><span class="ln">۱</span><p>فیزیک را در میز اپتیکی به نقطه بهینه برسانید، بعد بسته‌بندی کنید؛ بسته‌بندی هرگز فیزیک ضعیف را جبران نمی‌کند.</p></div>
+      <div class="lesson rv"><span class="ln">۲</span><p>نویز، مسئله شماره یک محصول است، نه کارایی: تفاوت آزمایشگاه و محصول حدود ۱۳ مرتبه بزرگی سرکوب نویز است.</p></div>
+      <div class="lesson rv"><span class="ln">۳</span><p>هر تنظیم دستی یک شکست میدانی است: آرایش ساگناک و چرخنده‌های بدون تنظیم دقیقاً به همین دلیل انتخاب شدند.</p></div>
+      <div class="lesson rv"><span class="ln">۴</span><p>محیط را دشمن طراحی کنید: میدان، دما و ارتعاش — هر سه به‌صورت کمی هدف‌گذاری و آزموده شدند.</p></div>
+      <div class="lesson rv"><span class="ln">۵</span><p>اعتبارسنجی مستقل و شبکه واقعی، تنها راه‌گذر از «دمو» به «محصول» است.</p></div>
+      <div class="lesson rv"><span class="ln">۶</span><p>هم‌افزایی اتمی، مزیت رقابتی بقا: منبع FWM و حافظه EIT هر دو روی ⁸⁷Rb — بدون تبدیل فرکانسی پرتلفات.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section id="sources" aria-labelledby="sources-h" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="tag">منابع</span>
+      <h2 id="sources-h">مستندات مسیر</h2>
+    </div>
+    <ol class="src-grid rv" dir="rtl">
+      <li>Wang et al., Phys. Rev. Applied 18 (2022) — <a href="https://arxiv.org/abs/2205.13091" target="_blank" rel="noopener">arXiv:2205.13091</a></li>
+      <li>مشخصه‌یابی مستقل Qu-MEM (2026) — <a href="https://arxiv.org/html/2610.24098" target="_blank" rel="noopener">arXiv:2610.24098</a></li>
+      <li>Entanglement, telecom photon & room-temperature memory (2025) — <a href="https://arxiv.org/abs/2503.11564" target="_blank" rel="noopener">arXiv:2503.11564</a></li>
+      <li>HOM interference, npj Quantum Information 10 (2024) — <a href="https://www.osti.gov/pages/servlets/purl/2581841" target="_blank" rel="noopener">OSTI</a></li>
+      <li>A multi-node room-temperature quantum network — <a href="https://arxiv.org/abs/1808.07015" target="_blank" rel="noopener">arXiv:1808.07015</a></li>
+      <li>A long-distance quantum internet testbed (158 km) — <a href="https://arxiv.org/abs/2101.12742" target="_blank" rel="noopener">arXiv:2101.12742</a></li>
+      <li>Automated entanglement over 34 km deployed fiber — <a href="https://ar5iv.labs.arxiv.org/html/2404.08626" target="_blank" rel="noopener">arXiv:2404.08626</a></li>
+      <li>BNL Quantum Network Facility — <a href="https://www.bnl.gov/instrumentation/quantum/equipment.php" target="_blank" rel="noopener">bnl.gov</a></li>
+      <li>ارائه فنی Qunnect در CERN — <a href="https://indico.cern.ch/event/1433194/contributions/6253052/attachments/3007202/5301142/Qunnect_CERN_Share_Export.pdf" target="_blank" rel="noopener">indico.cern.ch</a></li>
+      <li>Stony Brook — پتنت و فهرست TIME 2026 — <a href="https://news.stonybrook.edu/newsroom/press-release/general/stony-brook-universitys-patented-quantum-memory-technology-makes-times-best-inventions-list-2/" target="_blank" rel="noopener">news.stonybrook.edu</a></li>
+      <li>Qunnect — صفحه محصول و Carina — <a href="https://www.qunnect.inc/" target="_blank" rel="noopener">qunnect.inc</a></li>
+      <li>راهنمای آزمایشگاهی EIT (نقطه شروع فاز ۱) — <a href="https://arxiv.org/abs/2011.09229" target="_blank" rel="noopener">arXiv:2011.09229</a></li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span>نقشه راه فناوری — از آزمایشگاه EIT روبیدیوم تا حافظه کوانتومی Qu-MEM</span>
+    <span>گردآوری بر پایه مقالات داوری‌شده و مستندات رسمی · آبان ۱۴۰۵</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // reveal on scroll
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        // animate gantt bars
+        e.target.querySelectorAll('.g-bar').forEach(function(b){
+          b.style.width = 'calc(' + b.dataset.w + '% - 4px)';
+          if(b.dataset.r) b.style.right = b.dataset.r + '%';
+        });
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+  // mobile nav toggle
+  var tgl = document.querySelector('.nav-toggle');
+  var nvl = document.getElementById('navlinks');
+  if (tgl && nvl) {
+    tgl.addEventListener('click', function () {
+      var open = nvl.classList.toggle('open');
+      tgl.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nvl.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') { nvl.classList.remove('open'); tgl.setAttribute('aria-expanded', 'false'); }
+    });
+  }
+
+  // nav active state
+  var links = document.querySelectorAll('.nav-links a');
+  var map = {};
+  links.forEach(function(l){ map[l.getAttribute('href').slice(1)] = l; });
+  var so = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && map[e.target.id]){
+        links.forEach(function(l){ l.classList.remove('active'); });
+        map[e.target.id].classList.add('active');
+      }
+    });
+  }, {rootMargin:'-30% 0px -60% 0px'});
+  ['gantt','phases','trl','gates','milestones','lessons','sources'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) so.observe(el);
+  });
+})();
+</script>
+</body>
+</html>
